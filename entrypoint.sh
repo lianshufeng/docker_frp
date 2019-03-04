@@ -26,7 +26,7 @@ token = ${token}
 server_addr = ${s_host}
 server_port = ${s_port}
 
-[${c_type}]
+[${c_type}_${remote_port}]
 type = ${c_type}
 local_ip = ${c_local_ip}
 local_port = ${c_local_port}
