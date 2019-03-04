@@ -31,39 +31,26 @@ RUN apk add bash tzdata libsodium \
 
 
 
-#解压
-#RUN  cd /tmp \
-#	&& tar -xzvf frp.tar.gz \
-#	&& cp -r /tmp/${frp_name}/*  ${Setup_Path}/ \
-#	&& cd ${Setup_Path} \
-#	&& ls \
-#	&& pwd
-
-	
-	
-	#&& cp -r ./* ${Setup_Path} \
-	#&& cd ${Setup_Path} \
-	#&& ls /tmp/${frp_name} \
-	#&& rm -rf /tmp/${frp_name}
-
 
 #启动的环境变量
 ENV Setup_Path $Setup_Path
+ENV frp_name $frp_name
 
-#配置路径
-ENV frp_config_file $Setup_Path/config/frp.ini
-ENV frp_log_file $Setup_Path/log/frp.log
+#授权密钥
+ENV token "xiaofengfeng"
 
-#如果没有host则为服务端，有则为客户端需要连接的地址
-ENV s_host ""
+#终端类型,c 或 s
+ENV type "s"
 #服务端监听的端口，或客户端连接的端口
 ENV s_port "7000"
+
+#如果没有host则为服务端，有则为客户端需要连接的地址
+ENV s_host "127.0.0.1"
 #客户端配置
-ENV c_type "http"
+ENV c_type "tcp"
 ENV c_local_ip "127.0.0.1"
 ENV c_local_port "8080"
-ENV remote_port = 80
-
+ENV remote_port = "80"
 
 
 
