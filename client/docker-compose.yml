@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  frps:
+    image: frp
+    volumes:
+      - "./frpc.ini:/opt/frp/frpc.ini"
+      - "./logs:/opt/frp/logs"
+    container_name: frpc
+    restart: always
+    environment:
+      - entrypoint=./frpc -c frpc.ini

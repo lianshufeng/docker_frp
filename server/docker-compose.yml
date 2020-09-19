@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  frps:
+    image: frp
+    ports:
+      - "80:80" 
+      - "443:443"
+      - "7000:7000" 
+      - "7500:7500" #控制台
+      - "9000-9100:9000-9100"
+    volumes:
+      - "./frps.ini:/opt/frp/frps.ini"
+      - "./logs:/opt/frp/logs"
+    container_name: frps
+    restart: always
+    environment:
+      - entrypoint=./frps -c frps.ini
