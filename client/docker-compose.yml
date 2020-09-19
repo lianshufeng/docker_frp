@@ -2,7 +2,7 @@ version: "3"
 
 services:
   frps:
-    image: frp
+    image: registry.cn-chengdu.aliyuncs.com/1s/frp
     volumes:
       - "./frpc.ini:/opt/frp/frpc.ini"
       - "./logs:/opt/frp/logs"
