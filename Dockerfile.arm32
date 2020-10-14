@@ -2,15 +2,15 @@
 ##
 
 
-FROM arm64v8/alpine
+FROM arm32v6/alpine
 
 LABEL maintainer="xiaofeng <251708339@qq.com>"
 ARG TZ='Asia/Shanghai'
 ARG Setup_Path='/opt/frp'
 
 ENV TZ $TZ
-ENV frp_url https://github.com/fatedier/frp/releases/download/v0.34.1/frp_0.34.1_linux_arm64.tar.gz
-ARG frp_name='frp_0.34.1_linux_arm64'
+ENV frp_url https://github.com/fatedier/frp/releases/download/v0.34.1/frp_0.34.1_linux_arm.tar.gz
+ARG frp_name='frp_0.34.1_linux_arm'
 
 #安装工具
 RUN apk upgrade --update \
