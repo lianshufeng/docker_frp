@@ -1,0 +1,7 @@
+image: lianshufeng/frp:latest
+manifests:
+  - image: lianshufeng/frp:arm
+    platform:
+      architecture: arm
+      os: linux
+      variant: v7
