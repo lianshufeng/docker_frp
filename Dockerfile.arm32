@@ -3,6 +3,8 @@
 
 
 FROM arm32v6/alpine
+COPY qemu-aarch64-static /usr/bin/
+
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 LABEL maintainer="xiaofeng <251708339@qq.com>"
