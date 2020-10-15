@@ -2,7 +2,7 @@
 ##
 
 
-FROM arm32v6/alpine
+FROM arm32v7/alpine
 
 LABEL maintainer="xiaofeng <251708339@qq.com>"
 ARG TZ='Asia/Shanghai'
