@@ -8,6 +8,11 @@ chmod +x manifest-tool
 
 echo ${DOCKER_TAG}
 
+
+[[ "${DOCKER_TAG}" == "latest" ]] && \
+    { echo 'qemu-user-static: Download not required for this arch'; exit 0; }
+
+
 [[ "${DOCKER_TAG}" == "amd64" ]] && \
     { echo 'qemu-user-static: Download not required for this arch'; exit 0; }
 
