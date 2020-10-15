@@ -3,6 +3,7 @@
 
 
 FROM alpine
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 LABEL maintainer="xiaofeng <251708339@qq.com>"
 ARG TZ='Asia/Shanghai'
