@@ -9,8 +9,8 @@ ARG TZ='Asia/Shanghai'
 ARG Setup_Path='/opt/frp'
 
 ENV TZ $TZ
-ENV frp_url https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_amd64.tar.gz
-ARG frp_name='frp_0.33.0_linux_amd64'
+ENV frp_url https://github.com/fatedier/frp/releases/download/v0.34.1/frp_0.34.1_linux_amd64.tar.gz
+ARG frp_name='frp_0.34.1_linux_amd64'
 
 #安装工具
 RUN apk upgrade --update \
