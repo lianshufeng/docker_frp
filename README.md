@@ -1,6 +1,6 @@
 - pull
 ````shell
-docker pull registry.cn-chengdu.aliyuncs.com/1s/frp
+docker pull lianshufeng/frp
 ````
 
 
@@ -11,7 +11,7 @@ version: "3"
 
 services:
   frps:
-    image: registry.cn-chengdu.aliyuncs.com/1s/frp
+    image: lianshufeng/frp
     ports:
       - "80:80" 
       - "443:443"
@@ -87,7 +87,7 @@ version: "3"
 
 services:
   frps:
-    image: registry.cn-chengdu.aliyuncs.com/1s/frp
+    image: lianshufeng/frp
     volumes:
       - "./frpc.ini:/opt/frp/frpc.ini"
       - "./logs:/opt/frp/logs"
