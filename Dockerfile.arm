@@ -16,7 +16,7 @@ ARG Setup_Path='/opt/frp'
 ENV TZ $TZ
 ENV frp_version 0.55.1
 ENV frp_url https://github.com/fatedier/frp/releases/download/v${frp_version}/frp_${frp_version}_linux_amd64.tar.gz
-ENV frp_name='frp_${frp_version}_linux_amd64'
+ENV frp_name frp_${frp_version}_linux_amd64
 
 #安装工具
 RUN apk upgrade --update \
