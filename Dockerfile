@@ -2,7 +2,7 @@
 ##
 
 
-FROM alpine:3.19
+FROM alpine:3.22
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 LABEL maintainer="xiaofeng <251708339@qq.com>"
@@ -10,7 +10,7 @@ ARG TZ='Asia/Shanghai'
 ARG Setup_Path='/opt/frp'
 
 ENV TZ $TZ
-ENV frp_version 0.55.1
+ENV frp_version 0.64.0
 ENV frp_url https://github.com/fatedier/frp/releases/download/v${frp_version}/frp_${frp_version}_linux_amd64.tar.gz
 ENV frp_name frp_${frp_version}_linux_amd64
 
